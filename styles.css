@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "pp-sans-big-regular";
+    src: url("Fonts/PayPalSansBig-Regular.ttf");
+    font-weight: 400;
+}
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "pp-sans-big-regular"; /* Due to copyright restrictions, I'm unable to share the folder containing this typography. Please refer to the read.me file for instructions on downloading the typography directly from the original source. */
+    font-size: 62.5%; /* This rule sets the base font size of the document to 62.5%, which is equivalent to 10px (the default font size is 16px). This makes it easier to convert px values to rem units -> 16px = 1.6rem or 24px = 2.5rem */
+}
+
+.container {
+    position: relative;
+    border: .0625rem solid#9da3a6;
+    border-radius: 4px;
+    margin: 1rem 1rem 2rem;
+}
+
+.label {
+    position: absolute;
+    left: 10px;
+    top: 18px;
+    font-size: 1.8rem;
+    color: #6c7378;
+    pointer-events: none;
+    transition: .2s ease all;
+}
+
+.label:has(+ .input:focus), .label:has(+ .input:valid) {
+    top: 8px;
+    font-size: 1.4rem;
+}
+   
+.input {
+    font-size: 1.8rem;
+    height: 64px;
+    background: none;
+    width: 100%;
+    padding: 20px 10px 0;
+    text-overflow: ellipsis;
+    border-radius: 4px;
+}
+   
+.input:focus {
+  border: 0;
+  outline: 0;
+  box-shadow: inset 0 0 0 .125rem #1040c1,0 0 0 .475rem rgba(16,114,235,.16),inset 0 0 0 1px #031954,0 0 0 1px #1040c1;
+}
+
+
